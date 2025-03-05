@@ -1,29 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>S biometrico de control de acceso</title>
+    <title>Registro de Acceso Biométrico</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="busqueda">
-    Registro de acceso biometrico
+    <div class="contenedor">
+        <div class="barra-busqueda">
+            <span>Registro de acceso biométrico</span>
+            <input type="text">
+            <button>🔍</button>
+        </div>
 
-</div>    
-<div id="empleados">
-    <li> Encargado Alejandro, Fo. 143562</li>
-    <li> Encargado Alejandro, Fo. 243560</li>
-    <li> Encargado Alejandro, Fo. 651097</li>
-    <li> Encargado Alejandro, Fo. 164538</li>
-    <li></li>
-</div>
-<div id="objetos"> 
-    <li> <object data="baseMed" type="charvar">medicamento1</object></li>
-    <li> <object data="baseMed" type="charvar">medicamento2</object></li>
-    <li> <object data="baseMed" type="charvar">medicamento3</object></li>
-    <li> <object data="baseMed" type="charvar">medicamento4</object></li>
-    <li> <object data="baseMed" type="charvar">medicamento5</object></li>
-</div>
+        <div class="contenido">
+            <div class="barra-lateral">
+                <div class="caja rojo">Encargado Alejandro, Fo. 143562</div>
+                <div class="caja verde">Encargado Alejandro, Fo. 243560</div>
+                <div class="caja verde">Encargado Alejandro, Fo. 651097</div>
+                <div class="caja verde">Encargado Alejandro, Fo. 164538</div>
+            </div>
+
+            <div class="medicamentos">
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+            </div>
+
+            <div class="panel-derecho">
+                <div class="icono">👤</div>
+                <div class="caja rojo">Acceso autorizado</div>
+                <div class="cajas-blancas">
+                    <div class="caja-blanca"></div>
+                    <div class="caja-blanca"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

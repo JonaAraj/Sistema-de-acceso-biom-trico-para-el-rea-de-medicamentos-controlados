@@ -1,5 +1,5 @@
 body {
-    background-color: #dcc9a3;
+    background-color: #d6c094;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -19,18 +19,18 @@ body {
 .barra-busqueda {
     display: flex;
     align-items: center;
-    background-color: #7a9c9c;
-    padding: 10px;
-    border-radius: 20px;
-    width: 62%;
+    background-color: #94bbbb;
+    padding: 15px;
+    border-radius: 2px;
+    width: 100%;
     justify-content:initial;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .barra-busqueda input {
     flex-grow: 1;
     border: none;
-    margin-left: 10px;
+    margin-left: 125px;
     outline: none;
     height: 25px;
     max-width: 300px;
@@ -39,8 +39,9 @@ body {
 .barra-busqueda button {
     background: none;
     border: none;
-    font-size: 16px;
+    font-size: 25px;
     cursor: pointer;
+    
 }
 
 .contenido {
@@ -107,3 +108,4 @@ body {
     border: 2px solid black;
     
 }
+

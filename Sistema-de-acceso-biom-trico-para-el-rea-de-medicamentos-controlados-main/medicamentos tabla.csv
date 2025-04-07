@@ -1,0 +1,16 @@
+id,nombre,fabricante,dosis,forma_farmacologica,numero_lote,precio,existencia
+1,Paracetamol,Bayer,500,Tableta,BAY12345,50,200
+2,Ibuprofeno,Advil,400,Tableta,ADV67890,70,150
+3,Amoxicilina,Sandoz,250,Cápsula,SAN111213,120,100
+4,Omeprazol,Losec,20,Cápsula,LOSEC141516,150,80
+5,Loratadina,Claritin,10,Tableta,CLAR171819,120,300
+6,Acetaminofén,Tylenol,500,Tableta,TYL202122,80,220
+7,Cetirizina,Zyrtec,10,Tableta,ZYR232425,120,250
+8,Aspirina,Bayer,500,Tableta,BAY262728,90,180
+9,Diazepam,Valium,10,Tableta,VAL293031,180,90
+10,Clonazepam,Rivotril,1,Tableta,RIV323334,250,60
+11,Simvastatina,Zocor,20,Tableta,ZOC353637,350,120
+12,Metformina,Glucophage,850,Tableta,GLU383940,300,150
+13,Levotiroxina,Euthyrox,50,Tableta,EUT414243,500,130
+14,Losartan,Cozaar,50,Tableta,COZ444546,180,90
+15,Furosemida,Lasix,40,Tableta,LAS474849,160,110

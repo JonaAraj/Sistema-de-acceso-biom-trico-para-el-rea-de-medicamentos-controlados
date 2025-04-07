@@ -1,0 +1,135 @@
+body {
+    background-color: #d6c094;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.contenedor {
+    padding: 20px;
+    width: 80%;
+    max-width: 900px;
+}
+
+.barra-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: #94bbbb;
+    padding: 15px;
+    border-radius: 2px;
+    width: 100%;
+    justify-content:initial;
+    margin-bottom: 10px;
+}
+
+.barra-busqueda input {
+    flex-grow: 1;
+    border: none;
+    margin-left: 125px;
+    outline: none;
+    height: 25px;
+    max-width: 300px;
+}
+
+.barra-busqueda button {
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    
+}
+
+.contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.barra-lateral {
+    background-color: #6e8898;
+    padding: 15px;
+    border-radius: 10px;
+    width: 250px;
+}
+.contenedor-result{ /*contenedor de resultados de usqueda*/
+    max-height: 280px;
+    opacity: 0;
+    pointer-events: none;
+    padding: 0;
+    overflow-y: auto;
+}
+.barra-busqueda.active .contenedor-result{
+    opacity: 1;
+    pointer-events: auto;
+    padding: 10px 8px;
+}
+.barra-busqueda.active .contenedor-result li{
+    display: block;
+}
+.contenedor-result li{
+    list-style: none;
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: none;
+}
+.caja {
+    padding: 10px;
+    margin: 10px 0;
+    background: white;
+    text-align: center;
+    font-size: 16px;
+    border: 3px solid;
+}
+
+
+
+.medicamentos {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.caja-medicamento {
+    background-color: #d3d3d3;
+    padding: 15px;
+    margin: 8px;
+    width: 320px;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.panel-derecho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+.icono {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+.input.empleadoID{
+    display: flex;
+    padding: 10px;
+    font-size: 18px;
+    width: 20px;
+}
+.autorizado {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  .no-autorizado {
+    background-color: #f8d7da;
+    color: #721c24;
+  }

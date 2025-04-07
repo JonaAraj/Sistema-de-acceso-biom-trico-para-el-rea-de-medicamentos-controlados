@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Acceso Biométrico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <div class="barra-busqueda active">
+            <span>Registro de acceso biométrico</span>
+            <input type="text" placeholder="Registro de acceso biométrico">
+            <a href="#" target="_blank">
+            <button class="Lupa">🔍</button></a>
+
+            <ul class="contenedor-result">
+            <li>Sugerencia 1</li>
+            <li>Sugerencia 2</li>
+            <li>Sugerencia 3</li>
+            </ul>
+
+            <script src="Script.js"></script>
+            <script src="main.js"></script>
+        </div>
+
+        <div class="contenido">
+            <div class="barra-lateral">
+                <div class="caja rojo">Carlos López, Fo. 142675</div>
+                <div class="caja verde">Ana Torres, Fo. 354679</div>
+                <div class="caja verde">Luis Ramirez, Fo. 178920</div>
+                <div class="caja verde">Marta Díaz, Fo. 164538</div>
+            </div>
+            <script src="Emp verificacion.js"></script>
+        
+
+            <div class="medicamentos">
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+                <div class="caja-medicamento">Medicamento 1 (### piezas.)</div>
+            </div>
+
+            <div class="panel-derecho">
+                <div class="icono">👤</div>
+                <div class="caja">Acceso autorizado</div>
+
+
+                    <input type="text" id="empleadoId" placeholder="Ingresa tu ID de empleado" />
+                    <button onclick="verificarAcceso()">Verificar</button>
+                  
+                    <div id="resultado" class="mensaje"></div>
+                <script src="panel de acceso.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

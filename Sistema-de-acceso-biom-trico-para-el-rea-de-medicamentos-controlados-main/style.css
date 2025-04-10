@@ -125,11 +125,11 @@ body {
     width: 20px;
 }
 .autorizado {
-    background-color: #d4edda;
+    
     color: #155724;
   }
 
   .no-autorizado {
-    background-color: #f8d7da;
+    
     color: #721c24;
   }

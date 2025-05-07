@@ -21,7 +21,7 @@ inputbarra.onkeyup = (e) => {
 
         let allList = resultados.querySelectorAll('li');
         allList.forEach(li =>{
-            li.setAtribute('onclick','select(this)')
+            li.setAttribute('onclick','select(this)')
         })
     }else{
         barrabusqueda.classList.remove('active')
@@ -46,3 +46,27 @@ const showResult = list => {
     }
     resultados.innerHTML = ListData;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const contenedor = document.querySelector(".medicamentos");
+  
+    fetch("medicamentos tabla.csv")
+      .then(response => response.text())
+      .then(data => {
+        const lines = data.trim().split("\n").slice(1); 
+        lines.forEach(line => {
+          const cols = line.split(",");
+          const nombre = cols[1];         
+          const existencia = cols[7];     
+  
+          const div = document.createElement("div");
+          div.classList.add("caja-medicamento");
+          div.textContent = `${nombre} (${existencia} piezas)`;
+          contenedor.appendChild(div);
+        });
+      })
+      .catch(error => {
+        console.error("Error al cargar el CSV:", error);
+      });
+  });
+  

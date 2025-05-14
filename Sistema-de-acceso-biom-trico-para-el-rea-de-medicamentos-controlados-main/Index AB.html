@@ -7,6 +7,15 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <script>
+  const socket = new WebSocket("ws://localhost:3000");
+
+  socket.onmessage = (event) => {
+    const mensaje = event.data;
+    document.getElementById("resultado").textContent = mensaje;
+    document.getElementById("resultado").style.color = mensaje.includes("✅") ? "green" : "red";
+  };
+</script>
   <div class="contenedor">
     <div class="barra-busqueda active">
       <span>Registro de acceso biométrico</span>

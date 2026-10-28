@@ -17,7 +17,7 @@ void setup() {
 
 void loop() {
   getFingerprintID();
-  delay(1000);
+  delay(50);
 }
 
 uint8_t getFingerprintID() {
@@ -29,7 +29,11 @@ uint8_t getFingerprintID() {
 
   p = finger.fingerSearch();
   if (p == FINGERPRINT_OK) {
-    Serial.println(finger.fingerID);  // Se manda a Python
+    Serial.print("HuellaID:");
+    Serial.println(finger.fingerID);
+    while (finger.getImage() != FINGERPRINT_NOFINGER) {
+      delay(100);
+    }
   }
   return p;
 }

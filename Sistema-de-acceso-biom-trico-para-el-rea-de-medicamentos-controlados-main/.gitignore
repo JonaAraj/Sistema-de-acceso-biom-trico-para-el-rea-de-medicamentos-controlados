@@ -1,0 +1,10 @@
+node_modules/
+.venv/
+__pycache__/
+*.py[cod]
+acceso_local.db
+acceso_local.db-shm
+acceso_local.db-wal
+database/*.db
+database/*.db-shm
+database/*.db-wal

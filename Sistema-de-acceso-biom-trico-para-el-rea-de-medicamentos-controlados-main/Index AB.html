@@ -1,53 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Registro de Acceso Biométrico</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <script>
-  const socket = new WebSocket("ws://localhost:3000");
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Acceso Biométrico</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="barra-busqueda active">
+        <span>Registro de acceso biométrico</span>
+        <input
+          id="busquedaMedicamento"
+          type="text"
+          placeholder="Buscar medicamento..."
+        />
+        <a id="buscarMedicamento" href="#">
+          <button class="Lupa" type="button">🔍</button>
+        </a>
+        <ul class="contenedor-result"></ul>
+      </div>
 
-  socket.onmessage = (event) => {
-    const mensaje = event.data;
-    document.getElementById("resultado").textContent = mensaje;
-    document.getElementById("resultado").style.color = mensaje.includes("✅") ? "green" : "red";
-  };
-</script>
-  <div class="contenedor">
-    <div class="barra-busqueda active">
-      <span>Registro de acceso biométrico</span>
-      <input type="text" placeholder="Buscar medicamento..." />
-      <a href="#" target="_blank">
-        <button class="Lupa">🔍</button>
-      </a>
-      <ul class="contenedor-result"></ul>
+      <div class="contenido">
+        <div class="barra-lateral">
+          <div id="listaEmpleados"></div>
+        </div>
+
+        <div class="medicamentos"></div>
+
+        <div class="panel-derecho">
+          <div class="icono">👤</div>
+          <div class="caja">Verificación de acceso</div>
+
+          <input
+            type="text"
+            id="empleadoId"
+            name="empleadoId"
+            placeholder="Ingresa tu ID de empleado"
+          />
+          <button id="verificarAcceso" type="button">Verificar</button>
+
+          <div id="resultado" class="mensaje" role="status" aria-live="polite">
+            Esperando verificación.
+          </div>
+        </div>
+      </div>
     </div>
-
-    <div class="contenido">
-      <div class="barra-lateral">
-        <div id="listaEmpleados"></div>
-      </div>
-
-      <div class="medicamentos">
-      </div>
-
-      <div class="panel-derecho">
-        <div class="icono">👤</div>
-        <div class="caja">Acceso autorizado</div>
-
-        <input type="text" id="empleadoId" name="empleadoId" placeholder="Ingresa tu ID de empleado" />
-        <button onclick="verificarAcceso()">Verificar</button>
-
-        <div id="resultado" class="mensaje"></div>
-      </div>
-    </div>
-  </div>
-  <script src="Script.js"></script>
-  <script src="main.js"></script>
-  <script src="Emp verificacion.js"></script>
-  <script src="panel de acceso.js"></script>
-</body>
+    <script src="/api-client.js"></script>
+    <script src="/main.js"></script>
+    <script src="/emp-verificacion.js"></script>
+    <script src="/panel-acceso.js"></script>
+  </body>
 </html>

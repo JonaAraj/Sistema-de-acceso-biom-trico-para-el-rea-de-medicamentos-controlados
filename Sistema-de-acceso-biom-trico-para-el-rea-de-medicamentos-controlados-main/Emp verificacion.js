@@ -1,18 +1,30 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const empleados = [
-    { id: "EMP001", nombre: "Carlos López", autorizado: true },
-    { id: "EMP002", nombre: "Ana Torres", autorizado: false },
-    { id: "EMP003", nombre: "Luis Ramírez", autorizado: true },
-    { id: "EMP004", nombre: "Marta Díaz", autorizado: false }
-  ];
-
+async function cargarEmpleados() {
   const contenedor = document.getElementById("listaEmpleados");
+  contenedor.replaceChildren();
 
-  empleados.forEach(emp => {
-    const div = document.createElement("div");
-    div.classList.add("caja");
-    div.dataset.id = emp.id; // Guarda el ID en el elemento
-    div.textContent = `${emp.nombre} (${emp.id})`;
-    contenedor.appendChild(div);
-  });
+  try {
+    const empleados = await window.apiRequest("/employees");
+    if (empleados.length === 0) {
+      contenedor.textContent = "No hay empleados registrados.";
+      return;
+    }
+
+    empleados.forEach((empleado) => {
+      const tarjeta = document.createElement("div");
+      tarjeta.className = `caja ${empleado.authorized ? "verde" : "rojo"}`;
+      tarjeta.dataset.id = empleado.id;
+      tarjeta.textContent = `${empleado.name} (${empleado.id}) - Acceso ${empleado.authorized ? "autorizado" : "denegado"}`;
+      contenedor.append(tarjeta);
+    });
+  } catch (error) {
+    contenedor.textContent = `No se pudieron cargar los empleados: ${error.message}`;
+    console.error("Error al cargar empleados:", error);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  void cargarEmpleados();
+  window.setInterval(() => void cargarEmpleados(), 5000);
 });
+
+window.cargarEmpleados = cargarEmpleados;

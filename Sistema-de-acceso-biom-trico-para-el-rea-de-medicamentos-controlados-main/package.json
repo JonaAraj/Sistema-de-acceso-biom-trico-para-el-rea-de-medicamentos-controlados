@@ -1,0 +1,17 @@
+{
+  "name": "sistema-acceso-biometrico-local",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Servidor local Node.js para la interfaz y el lector AS608",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node servidor.js"
+  },
+  "dependencies": {
+    "@serialport/parser-readline": "^12.0.0",
+    "express": "^4.21.2",
+    "serialport": "^12.0.0"
+  }
+}
